@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36</title>
+</head>
+<body>
+    <h1> Motivational Quotes</h1>
+    <div id="quoteDisplay">Loading...</div>
+
+    <script>
+        const quotes = [
+        "The only way to do great work is to love what you do. - Steve Jobs",
+      "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+      "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+      "In order to succeed, we must first believe that we can. - Nikos Kazantzakis",
+      "Your time is limited, don't waste it living someone else's life. - Steve Jobs","Subscribe to Drop X Out"
+        ];
+
+        function displayRandomQuotes(){
+            const quoteDisplay = document.getElementById("quoteDisplay");
+            const randomIndex = Math.floor(Math.random()*quotes.length);
+            quoteDisplay.textContent = quotes[randomIndex];
+        }
+
+        displayRandomQuotes();
+
+        function changeQuotePeriodically(){
+            displayRandomQuotes();
+            setTimeout(changeQuotePeriodically,10000);
+        }
+
+        changeQuotePeriodically();
+    </script>
+</body>
+</html>

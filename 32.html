@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" name="name" required>
+        <input type="email" name="email" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm(){
+            let form = document.getElementById("myForm");
+            if(form.checkValidity()){
+                alert("Form submitted")
+            }
+            else{
+                alert("Please enter required field");
+            }
+        }
+
+        let form = document.getElementById("myForm");
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            validateForm();
+        });
+
+    </script>
+</body>
+</html>

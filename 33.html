@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33</title>
+</head>
+<body>
+    <div>
+        Lorem <strong>ipsum dolor</strong>, sit amet consectetur adipisicing elit. Officiis vitae deleniti quisquam cumque totam fugit numquam nihil nulla. Magni officia obcaecati maiores rem dolores omnis quasi quis pariatur quae cum.
+    </div>
+    
+    <script>
+        let parent = document.querySelector("div");
+        let child= document.querySelector("strong");
+
+        parent.addEventListener("click",()=>{
+            console.log("Parent")
+        },true)
+        child.addEventListener("click",()=>{
+            console.log("Child")
+        },true)
+
+    </script>
+</body>
+</html>
